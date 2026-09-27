@@ -15,11 +15,11 @@ public class GeneralWard : Ward   // ": Ward" means GeneralWard inherits from Wa
     // "override" replaces the abstract CanAdmit from Ward with this ward's rule.
     public override bool CanAdmit(Patient patient)
     {
-        return patient.Age >= 18 && patient.Age < 75 && !patient.IsPregnant && patient.Severity != Severity.Critical;
+        return patient.Age >= AdultAge && patient.Age < ElderlyAge && !patient.IsPregnant && patient.Severity != Severity.Critical;
     }
 
     public override string GetAdmissionRule()
     {
-        return "adults 18 to 74, not critical";
+        return $"adults {AdultAge} to {ElderlyAge - 1}, not critical";
     }
 }

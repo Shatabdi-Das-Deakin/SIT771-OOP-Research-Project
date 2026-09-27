@@ -13,11 +13,11 @@ public class ChildrensWard : Ward
 
     public override bool CanAdmit(Patient patient)
     {
-        return patient.Age < 18 && !patient.IsPregnant && patient.Severity != Severity.Critical;
+        return patient.Age < AdultAge && !patient.IsPregnant && patient.Severity != Severity.Critical;
     }
 
     public override string GetAdmissionRule()
     {
-        return "children under 18, not critical";
+        return $"children under {AdultAge}, not critical";
     }
 }

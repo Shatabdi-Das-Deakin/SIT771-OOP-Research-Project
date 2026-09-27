@@ -21,6 +21,14 @@ using System.Linq;
 
 public abstract class Ward
 {
+    // Age limits that more than one kind of ward depends on. They are kept
+    // here, in the base class, so each limit is written only once. Moving a
+    // limit (for example the adult age) is then a one line change, and the
+    // wards on either side of it can never disagree. "protected" means only
+    // Ward and its subclasses can use them. (Added after Change 3.)
+    protected const int AdultAge = 18;
+    protected const int ElderlyAge = 75;
+
     private string _code;      // short code used in bed numbers, e.g. "ICU"
     private string _name;      // full name shown to the user, e.g. "Intensive Care"
     private List<Bed> _beds;   // every bed in this ward
