@@ -31,6 +31,7 @@ public class Program
         hospital.AddWard(new Ward(WardType.Children, "CH", "Children's Ward", 2));
         hospital.AddWard(new Ward(WardType.General, "GA", "General Ward A", 3));
         hospital.AddWard(new Ward(WardType.General, "GB", "General Ward B", 3));
+        hospital.AddWard(new Ward(WardType.Elderly, "EL", "Elderly Care", 2));
 
         // Loads saved patients (if the file exists) back into their beds.
         hospital.LoadFromFile(DATA_FILE);

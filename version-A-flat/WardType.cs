@@ -10,5 +10,6 @@ public enum WardType
 {
     ICU,
     Children,
-    General
+    General,
+    Elderly
 }
