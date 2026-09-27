@@ -32,9 +32,23 @@ The diagrams can also be opened in [Lucidchart](https://lucid.app/lucidchart/c43
 
 ## Results
 
+After every change both versions passed all ten tests and printed identical output. This is what happened in each change:
+
+| Change | Version A: one Ward class with if/else | Version B: one class for each kind of ward | Easier |
+|---|---|---|:---:|
+| **C1: add an Elderly Ward** | Had to edit the existing Ward class and the WardType enum. | Wrote one new class and one line to register it. No existing code was touched. | **B** |
+| **C1: first attempt** | An 80 year old was sent to a General Ward. Only a test caught it. | The same mistake, caught the same way. | **Neither** |
+| **C2: add a Maternity Ward (needs new patient data)** | Adding the new data took the same work in both versions. The new rules all went into one file, Ward.cs. | Adding the new data took the same work in both versions. The new rules touched four ward classes, because three other wards had to exclude pregnant patients. | **A** |
+| **C3: raise the Children's Ward limit to 18** | One file. All the rules are in one method. | Two ward classes had to change together. | **A** |
+| **C4: add a ward but forget its rule** | Built with no warnings. The new ward quietly admitted nobody. | Would not build. The compiler named both missing methods. | **B** |
+
+In short, giving each ward its own class was better when something new was added, the single class was better when related rules had to change together, and neither design stopped a rule from being wrong.
+
+### Detailed numbers
+
 Files with code changes, and lines of code added and removed (comments and blank lines are not counted):
 
-| Change | Version A (enum and if/else) | Version B (abstract class) |
+| Step | Version A | Version B |
 |---|---|---|
 | C1 Add Elderly Ward | 3 files, +7 / -1 | 2 files, +14 / -0 |
 | C1 Fix overlap with General Ward | 1 file, +2 / -2 | 1 file, +2 / -2 |
@@ -42,19 +56,8 @@ Files with code changes, and lines of code added and removed (comments and blank
 | C2 Pregnancy data | 3 files, +30 / -6 | 3 files, +30 / -6 |
 | C2 Maternity rules | 3 files, +10 / -4 | 5 files, +17 / -3 |
 | C3 Children under 18 | 1 file, +4 / -4 | 2 files, +4 / -4 |
-| C4 Forget a rule | Builds with no errors or warnings, and the new ward never admits anyone | Does not build: two CS0534 errors name the missing methods |
 
-After every change both versions passed all ten tests and printed identical output.
-
-What I found:
-
-* Adding a new kind of ward was safer in Version B, because no existing code had to be edited. It needed more lines, though.
-* In Version B the compiler caught a ward with missing rules. Version A accepted it without any warning.
-* When several rules had to change together (C2 and C3), Version A was easier, because all its rules are in one method.
-* Neither design helped when new data was needed. The data part of C2 cost the same in both.
-* In C1 an 80 year old was first sent to the wrong ward in both versions. Only a test found this, not the compiler.
-
-The full numbers are in [`results/measurements.csv`](results/measurements.csv) and the C4 compiler output is in [`results/C4_forgotten_rule_output.txt`](results/C4_forgotten_rule_output.txt).
+These numbers are small, so they are best read together with the table above. They are also in [`results/measurements.csv`](results/measurements.csv), and the C4 compiler output is in [`results/C4_forgotten_rule_output.txt`](results/C4_forgotten_rule_output.txt). The [results README](results/README.md) explains how to recount them.
 
 ## Repository layout
 
