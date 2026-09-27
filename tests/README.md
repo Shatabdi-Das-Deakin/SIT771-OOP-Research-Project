@@ -2,7 +2,7 @@
 
 Each test is a text file in `inputs/`. Every line is one answer typed into the program's menu, in order. The test script runs the program with that input and compares what it prints with the matching file in `expected/`. Clock times change on every run, so they are replaced with `<TIME>` before comparing.
 
-Both versions of the program must pass every test, and they must print exactly the same output. That is how I checked the two versions behave the same before and after each change.
+Both designs of the program must pass every test, and they must print exactly the same output. That is how I checked the two versions behave the same before and after each change.
 
 | Test | What it checks | Added |
 |---|---|---|
@@ -27,4 +27,4 @@ From the top folder of the repository:
 ./run_tests.sh version-B-polymorphic      (Mac or Linux)
 ```
 
-`version-B-polymorphic` is the class-per-ward version. Replace it with `version-A-flat` to test the if/else version. Each should end with `10 passed, 0 failed`.
+`version-B-polymorphic` is the inheritance-based design. Replace it with `version-A-flat` to test the conditional design. Each should end with `10 passed, 0 failed`.

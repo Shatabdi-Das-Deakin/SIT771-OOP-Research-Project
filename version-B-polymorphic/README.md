@@ -1,6 +1,6 @@
-# The class-per-ward version
+# The inheritance-based design
 
-This is my Patient Management program in its original design, with the three small fixes and Changes 1 to 3 from the research.
+This is my Patient Management program in its original design, with the three small fixes, Changes 1 to 3 and the refinement from the research.
 
 `Ward` is an abstract class. It holds everything every ward shares, such as the beds and admitting and discharging patients. It declares two abstract methods that every kind of ward must write for itself:
 
@@ -14,6 +14,8 @@ This is my Patient Management program in its original design, with the three sma
 | `ChildrensWard` | Under 18, not pregnant, not critical |
 | `GeneralWard` | 18 to 74, not pregnant, not critical |
 | `ElderlyWard` | 75 and over, not pregnant, not critical |
+
+The age limits that several wards share are kept once in `Ward` as protected constants, `AdultAge` (18) and `ElderlyAge` (75), so a limit is changed in one place.
 
 `Hospital` keeps all the wards in one `List<Ward>` and calls `CanAdmit` on each one without checking which kind it is. Adding a new kind of ward means writing one new class and adding one line in `Program.cs`. If a new ward class leaves out either method, the program does not build.
 
