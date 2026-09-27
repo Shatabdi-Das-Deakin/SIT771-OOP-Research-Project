@@ -119,12 +119,13 @@ public class Program
         string name = ReadText("Enter patient name: ");
         int age = ReadInteger("Enter age: ", 0, 120);
         Severity severity = ReadSeverity();
+        bool isPregnant = ReadYesNo("Is the patient pregnant? (y/n): ");
 
         // Remember how long the log is before the action. Everything added
         // after this point is what the action caused, and PrintWhatHappened
         // shows just those new lines.
         int logCountBefore = hospital.GetLog().Count;
-        hospital.RegisterPatient(name, age, severity);
+        hospital.RegisterPatient(name, age, severity, isPregnant);
         PrintWhatHappened(hospital, logCountBefore);
     }
 
@@ -291,6 +292,24 @@ public class Program
             if (input == "3") return Severity.Critical;
 
             Console.WriteLine("Please enter 1, 2 or 3.");
+        }
+    }
+
+    // Keeps asking until the user types y or n (added in C2).
+    private static bool ReadYesNo(string message)
+    {
+        while (true)
+        {
+            Console.Write(message);
+            string input = Console.ReadLine();
+
+            if (input == null) return false;   // input stream ended (only happens with piped input)
+
+            input = input.Trim().ToLower();
+            if (input == "y") return true;
+            if (input == "n") return false;
+
+            Console.WriteLine("Please enter y or n.");
         }
     }
 
