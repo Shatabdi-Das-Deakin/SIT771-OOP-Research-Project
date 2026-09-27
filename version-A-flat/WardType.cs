@@ -11,5 +11,6 @@ public enum WardType
     ICU,
     Children,
     General,
-    Elderly
+    Elderly,
+    Maternity
 }
