@@ -45,7 +45,10 @@ public class WardView
         _selectedBed = null;
         _selectedWard = null;
 
-        Window window = new Window("Patient Management - Ward Map", 820, 600);
+        // The window grows with the number of wards (changed in C1, when a
+        // fifth ward made the old fixed size draw beds over the legend).
+        int height = (int)GetDetailsY() + 95;
+        Window window = new Window("Patient Management - Ward Map", 820, height);
 
         while (!window.CloseRequested)
         {
@@ -69,6 +72,18 @@ public class WardView
         double x = LEFT + bedIndex * (BED_WIDTH + BED_GAP);
         double y = TOP + wardIndex * ROW_HEIGHT + 18;   // +18 leaves room for the ward title
         return SplashKit.RectangleFrom(x, y, BED_WIDTH, BED_HEIGHT);
+    }
+
+    // The legend and the details box sit just below the last ward row,
+    // so adding a ward moves them down instead of drawing over them.
+    private double GetLegendY()
+    {
+        return TOP + _hospital.GetWards().Count * ROW_HEIGHT + 5;
+    }
+
+    private double GetDetailsY()
+    {
+        return GetLegendY() + 35;
     }
 
     // Checks every bed to see if the mouse click landed inside it.
@@ -179,7 +194,7 @@ public class WardView
     // Small coloured squares explaining what each colour means.
     private void DrawLegend(Window window)
     {
-        double y = 470;
+        double y = GetLegendY();
         window.FillRectangle(Color.LightGreen, LEFT, y, 14, 14);
         window.DrawText("Free", Color.Black, LEFT + 20, y + 3);
         window.FillRectangle(Color.Salmon, LEFT + 80, y, 14, 14);
@@ -191,7 +206,7 @@ public class WardView
     // The box at the bottom that shows the selected bed's details.
     private void DrawDetails(Window window)
     {
-        double y = 505;
+        double y = GetDetailsY();
         window.DrawRectangle(Color.Gray, LEFT, y, 780, 80);
 
         if (_selectedBed == null)
