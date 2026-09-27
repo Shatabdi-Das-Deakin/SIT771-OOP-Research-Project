@@ -1,0 +1,17 @@
+C4 experiment: a new ward type added without its rules
+
+Version B (polymorphic) build output:
+    0 Warning(s)
+    2 Error(s)
+RehabWard.cs(2,14): error CS0534: 'RehabWard' does not implement inherited abstract member 'Ward.CanAdmit(Patient)'
+RehabWard.cs(2,14): error CS0534: 'RehabWard' does not implement inherited abstract member 'Ward.GetAdmissionRule()'
+
+Version A (flat) build output:
+    0 Error(s)
+    0 Warning(s)
+
+Version A run (admit a 40 year old, then view occupancy):
+ - Ruth Bell (P001) admitted to General Ward A, bed GA-1
+Rehab (): 0/2 beds in use
+   RE-1   free
+   RE-2   free

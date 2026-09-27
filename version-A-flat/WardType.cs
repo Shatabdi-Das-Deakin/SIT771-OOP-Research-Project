@@ -12,5 +12,6 @@ public enum WardType
     Children,
     General,
     Elderly,
-    Maternity
+    Maternity,
+    Rehab
 }
