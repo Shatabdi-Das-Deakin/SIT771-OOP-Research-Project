@@ -1,6 +1,6 @@
 # Version B: abstract class design
 
-This is my Patient Management program from Task 7.3D, with the three small fixes and the changes C1 to C3 from the research.
+This is my Patient Management program in its original design, with the three small fixes and the changes C1 to C3 from the research.
 
 `Ward` is an abstract class. It holds everything every ward shares, such as the beds and admitting and discharging patients. It declares two abstract methods that every kind of ward must write for itself:
 

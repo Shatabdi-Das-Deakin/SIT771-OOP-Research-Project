@@ -3,7 +3,7 @@
 Shatabdi Das (s226086986)
 SIT771 Object-Oriented Development, Deakin University
 
-This repository holds the code, tests and results for my High Distinction research project. I took my Patient Management program from Task 7.3D, built a second version of it with a different design, and made the same changes to both to see which design was easier to extend and test.
+This repository holds the code, tests and results for my High Distinction research project. I took my Patient Management program, which I wrote earlier in the unit, built a second version of it with a different design, and made the same changes to both to see which design was easier to extend and test.
 
 ## Research question
 
@@ -11,7 +11,7 @@ How does designing with abstraction, inheritance and polymorphism affect how eas
 
 ## The two versions
 
-**Version B (polymorphic)** is my 7.3D design. `Ward` is an abstract class with two abstract methods, `CanAdmit` and `GetAdmissionRule`. Each kind of ward is a subclass that overrides them. The `Hospital` class keeps every ward in one `List<Ward>` and never checks what kind of ward it is talking to.
+**Version B (polymorphic)** is the original design of the program. `Ward` is an abstract class with two abstract methods, `CanAdmit` and `GetAdmissionRule`. Each kind of ward is a subclass that overrides them. The `Hospital` class keeps every ward in one `List<Ward>` and never checks what kind of ward it is talking to.
 
 ![Version B class diagram](docs/class-diagram-version-B.png)
 
@@ -75,7 +75,7 @@ The `tests`, `results` and both version folders each have their own README with 
 
 The commit history shows the steps in the order I did them. Start from the oldest commit:
 
-1. Step 0: the program exactly as submitted for Task 7.3D
+1. Step 0: the program as it was before the research started
 2. Step 1: three small fixes, then the scripted tests and their expected output
 3. Step 2: Version A built, with identical output to Version B on every test
 4. C1: the Elderly Ward. The first attempt failed test T7 in both versions, and the next commits show the fix
