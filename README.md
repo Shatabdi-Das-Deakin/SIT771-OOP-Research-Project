@@ -14,7 +14,7 @@
 | `tests/expected/` | The output each test should produce (clock times replaced with `<TIME>`) |
 | `results/measurements.csv` | Files and lines of code changed by each change, for both versions |
 | `results/C4_forgotten_rule_output.txt` | Compiler and program output from the "forgotten rule" experiment |
-| `docs/` | Class diagrams of both versions |
+| `docs/` | Class diagrams of both versions (also in [Lucidchart](https://lucid.app/lucidchart/c43ebfbf-2a3f-425a-a625-0f350c25f852/edit?invitationId=inv_e427f615-a624-44fc-bdd2-e396cd70c8ab), view only) |
 | `run_tests.sh`, `run_tests.ps1` | Build one version and run every test (Mac/Linux and Windows) |
 
 ## How the research was done
