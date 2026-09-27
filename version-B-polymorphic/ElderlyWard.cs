@@ -13,7 +13,7 @@ public class ElderlyWard : Ward
 
     public override bool CanAdmit(Patient patient)
     {
-        return patient.Age >= 75 && patient.Severity != Severity.Critical;
+        return patient.Age >= 75 && !patient.IsPregnant && patient.Severity != Severity.Critical;
     }
 
     public override string GetAdmissionRule()
