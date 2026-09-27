@@ -4,11 +4,12 @@
 // Intensive Care takes critical patients of any age, including
 // children. It only looks at severity, not age.
 //
-// Between the three ward types, every possible patient fits exactly
+// Between the four ward types, every possible patient fits exactly
 // one kind of ward:
 //   Critical, any age      -> ICUWard
 //   Not critical, under 16 -> ChildrensWard
-//   Not critical, 16+      -> GeneralWard
+//   Not critical, 16 to 74 -> GeneralWard
+//   Not critical, 75+      -> ElderlyWard
 // ============================================================
 
 public class ICUWard : Ward
