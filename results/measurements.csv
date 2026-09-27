@@ -1,0 +1,15 @@
+change,step,version,files_with_code_changes,code_lines_added,code_lines_removed,files
+C1,Add Elderly Ward,A,3,7,1,Program.cs Ward.cs WardType.cs
+C1,Add Elderly Ward,B,2,14,0,ElderlyWard.cs Program.cs
+C1,Fix overlap with General,A,1,2,2,Ward.cs
+C1,Fix overlap with General,B,1,2,2,GeneralWard.cs
+C1,Ward map layout,A,1,12,3,WardView.cs
+C1,Ward map layout,B,1,12,3,WardView.cs
+C2,Pregnancy data,A,3,30,6,Hospital.cs Patient.cs Program.cs
+C2,Pregnancy data,B,3,30,6,Hospital.cs Patient.cs Program.cs
+C2,Maternity rules,A,3,10,4,Program.cs Ward.cs WardType.cs
+C2,Maternity rules,B,5,17,3,ChildrensWard.cs ElderlyWard.cs GeneralWard.cs MaternityWard.cs Program.cs
+C3,Children under 18,A,1,4,4,Ward.cs
+C3,Children under 18,B,2,4,4,ChildrensWard.cs GeneralWard.cs
+C4,Forget a rule,A,compiles with 0 errors and 0 warnings; ward silently accepts nobody,,,
+C4,Forget a rule,B,does not compile: 2 x CS0534 naming both missing methods,,,
