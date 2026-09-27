@@ -69,6 +69,8 @@ The full numbers are in [`results/measurements.csv`](results/measurements.csv) a
 | `run_tests.sh` | Runs every test on Mac or Linux |
 | `run_tests.ps1` | Runs every test on Windows |
 
+The `tests`, `results` and both version folders each have their own README with more detail.
+
 ## How to follow the work
 
 The commit history shows the steps in the order I did them. Start from the oldest commit:
