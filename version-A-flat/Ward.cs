@@ -58,7 +58,7 @@ public class Ward
         else if (_type == WardType.Children)
             return patient.Age < 16 && patient.Severity != Severity.Critical;
         else if (_type == WardType.General)
-            return patient.Age >= 16 && patient.Severity != Severity.Critical;
+            return patient.Age >= 16 && patient.Age < 75 && patient.Severity != Severity.Critical;
         else if (_type == WardType.Elderly)
             return patient.Age >= 75 && patient.Severity != Severity.Critical;
 
@@ -73,7 +73,7 @@ public class Ward
         else if (_type == WardType.Children)
             return "children under 16, not critical";
         else if (_type == WardType.General)
-            return "adults 16+, not critical";
+            return "adults 16 to 74, not critical";
         else if (_type == WardType.Elderly)
             return "adults 75+, not critical";
 
