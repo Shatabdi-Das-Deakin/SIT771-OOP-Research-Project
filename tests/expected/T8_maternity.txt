@@ -14,31 +14,9 @@
 10. Save Data
 0. Exit without Saving
 Choose an option: 
-Invalid option.
-
-===============================
-   Patient Management
-===============================
-1. View Ward Occupancy
-2. Admit New Patient
-3. Discharge Patient
-4. Update Patient Condition
-5. View Waiting List
-6. Search Patients
-7. View Activity Log
-8. Open Ward Map
-9. Load Demo Patients
-10. Save Data
-0. Exit without Saving
-Choose an option: 
-Enter patient name: This can't be empty.
-Enter patient name: Enter age: Please enter a whole number from 0 to 120.
-Enter age: Please enter a whole number from 0 to 120.
-Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): Please enter 1, 2 or 3.
-Severity (1 = Low, 2 = Moderate, 3 = Critical): Is the patient pregnant? (y/n): Please enter y or n.
-Is the patient pregnant? (y/n): 
+Enter patient name: Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): Is the patient pregnant? (y/n): 
 What happened:
- - Ava Lee (P001) admitted to General Ward A, bed GA-1
+ - Sara Ali (P001) admitted to Maternity, bed MA-1
 
 ===============================
    Patient Management
@@ -55,7 +33,9 @@ What happened:
 10. Save Data
 0. Exit without Saving
 Choose an option: 
-Enter patient ID: Patient not found.
+Enter patient name: Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): Is the patient pregnant? (y/n): 
+What happened:
+ - Tim Ross (P002) admitted to General Ward A, bed GA-1
 
 ===============================
    Patient Management
@@ -72,7 +52,10 @@ Enter patient ID: Patient not found.
 10. Save Data
 0. Exit without Saving
 Choose an option: 
-Enter patient ID: Severity (1 = Low, 2 = Moderate, 3 = Critical): Patient not found.
+Enter patient ID: Severity (1 = Low, 2 = Moderate, 3 = Critical): 
+What happened:
+ - Sara Ali (P001) changed from Low to Critical
+ - Sara Ali (P001) moved from Maternity bed MA-1 to Intensive Care bed ICU-1
 
 ===============================
    Patient Management
@@ -89,7 +72,51 @@ Enter patient ID: Severity (1 = Low, 2 = Moderate, 3 = Critical): Patient not fo
 10. Save Data
 0. Exit without Saving
 Choose an option: 
-Invalid option.
+Intensive Care (critical patients, any age): 1/2 beds in use
+   ICU-1  P001 Sara Ali, age 30, Critical, pregnant
+   ICU-2  free
+
+Children's Ward (children under 16, not critical): 0/2 beds in use
+   CH-1   free
+   CH-2   free
+
+General Ward A (adults 16 to 74, not critical): 1/3 beds in use
+   GA-1   P002 Tim Ross, age 30, Low
+   GA-2   free
+   GA-3   free
+
+General Ward B (adults 16 to 74, not critical): 0/3 beds in use
+   GB-1   free
+   GB-2   free
+   GB-3   free
+
+Elderly Care (adults 75+, not critical): 0/2 beds in use
+   EL-1   free
+   EL-2   free
+
+Maternity (pregnant, not critical): 0/2 beds in use
+   MA-1   free
+   MA-2   free
+
+Waiting list: 0 patient(s)
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter a name or ID to search for: 
+P001 Sara Ali, age 30, Critical, pregnant | Intensive Care, bed ICU-1
 
 ===============================
    Patient Management

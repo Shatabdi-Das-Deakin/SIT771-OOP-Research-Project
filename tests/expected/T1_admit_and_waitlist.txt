@@ -69,7 +69,7 @@ P008 Ben Harris, age 63, Moderate | General Ward A, bed GA-3
 10. Save Data
 0. Exit without Saving
 Choose an option: 
-Enter patient name: Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): 
+Enter patient name: Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): Is the patient pregnant? (y/n): 
 What happened:
  - Zoe Martin (P012) admitted to Children's Ward, bed CH-2
 
@@ -88,7 +88,7 @@ What happened:
 10. Save Data
 0. Exit without Saving
 Choose an option: 
-Enter patient name: Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): 
+Enter patient name: Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): Is the patient pregnant? (y/n): 
 What happened:
  - No suitable bed for Ravi Kumar (P013, Critical, age 50). Added to waiting list at position 2
 

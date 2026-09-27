@@ -131,6 +131,10 @@ Elderly Care (adults 75+, not critical): 0/2 beds in use
    EL-1   free
    EL-2   free
 
+Maternity (pregnant, not critical): 0/2 beds in use
+   MA-1   free
+   MA-2   free
+
 Waiting list: 1 patient(s)
 
 ===============================
