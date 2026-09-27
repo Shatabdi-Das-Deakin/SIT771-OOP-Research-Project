@@ -1,6 +1,6 @@
-# Version A: enum and if/else design
+# The if/else version
 
-This version does exactly the same job as Version B and prints exactly the same output on every test. I built it for the research so the two designs could be compared fairly.
+This version does exactly the same job as the class-per-ward version and prints exactly the same output on every test. I built it for the research so the two designs could be compared fairly.
 
 There are no ward subclasses. There is one `Ward` class, and each ward object stores a `WardType` value:
 
@@ -8,7 +8,7 @@ There are no ward subclasses. There is one `Ward` class, and each ward object st
 ICU, Children, General, Elderly, Maternity
 ```
 
-`CanAdmit` and `GetAdmissionRule` use if/else statements on that value to choose the rule. Everything else, including `Hospital`, the menu and the ward map, is the same as Version B.
+`CanAdmit` and `GetAdmissionRule` use if/else statements on that value to choose the rule. Everything else, including `Hospital`, the menu and the ward map, is the same as the class-per-ward version.
 
 The main differences I found:
 
@@ -22,4 +22,4 @@ The main differences I found:
 dotnet run
 ```
 
-The menu is identical to Version B. Option 9 loads demo patients and option 8 opens the SplashKit ward map.
+The menu is identical to the class-per-ward version. Option 9 loads demo patients and option 8 opens the SplashKit ward map.

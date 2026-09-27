@@ -7,7 +7,7 @@ For every change, this file records how much code each version needed:
 * **files_with_code_changes**: files where at least one line of code changed. A file where only comments changed is not counted.
 * **code_lines_added** and **code_lines_removed**: lines added and removed, not counting comments or blank lines. A line that was edited counts as one removed and one added.
 
-Each change was made in two commits, one for Version A and one for Version B, so each row comes from a single commit.
+Each change was made in two commits, one for each version, so each row comes from a single commit. In the commit messages and in this file, "A" is the if/else version and "B" is the class-per-ward version.
 
 ## How to recount a result
 
@@ -24,11 +24,11 @@ count() {
 count <commit> version-B-polymorphic
 ```
 
-For example, the commit "C2 rules (Version B)" gives `added: 17  removed: 3`, which matches the C2 Maternity rules row for Version B.
+For example, the commit "C2 rules (Version B)" gives `added: 17  removed: 3`, which matches the Maternity rules for the class-per-ward version.
 
 ## C4_forgotten_rule_output.txt
 
-The output from experiment C4, where a new ward was added to both versions without its rules. It shows the compiler output for each version and what Version A printed when it ran. The code for this experiment is on the `c4-forgotten-rule` branch.
+The output from Change 4 (C4 in the commit messages), where a new ward was added to both versions without its rule. It shows the compiler output for each version and what the if/else version printed when it ran. The code for this experiment is on the `c4-forgotten-rule` branch.
 
 ## Limits of these numbers
 
