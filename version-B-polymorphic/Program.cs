@@ -28,7 +28,7 @@ public class Program
         // List<Ward> inside Hospital. Bed counts are small on purpose so
         // the wards fill up quickly during the demo.
         hospital.AddWard(new ICUWard("ICU", "Intensive Care", 2));
-        hospital.AddWard(new ChildrensWard("CH", "Childrens Ward", 2));
+        hospital.AddWard(new ChildrensWard("CH", "Children's Ward", 2));
         hospital.AddWard(new GeneralWard("GA", "General Ward A", 3));
         hospital.AddWard(new GeneralWard("GB", "General Ward B", 3));
 
@@ -57,7 +57,7 @@ public class Program
             Console.WriteLine("8. Open Ward Map");
             Console.WriteLine("9. Load Demo Patients");
             Console.WriteLine("10. Save Data");
-            Console.WriteLine("0.Exit without Saving");
+            Console.WriteLine("0. Exit without Saving");
 
             Console.Write("Choose an option: ");
             string option = Console.ReadLine();
@@ -79,8 +79,7 @@ public class Program
             }
             else if (option == "0")
             {
-                //hospital.SaveToFile(DATA_FILE);
-                Console.WriteLine("Data saved. Goodbye!");
+                Console.WriteLine("Goodbye!");
                 break;   // leaves the while loop, which ends the program
             }
             else Console.WriteLine("Invalid option.");
