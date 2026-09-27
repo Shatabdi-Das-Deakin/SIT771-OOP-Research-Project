@@ -1,0 +1,168 @@
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Demo patients loaded. ICU and both general wards are full, and two patients are waiting.
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter patient ID: 
+What happened:
+ - Maya Chen (P001) discharged from Intensive Care, bed ICU-1 is now free
+ - Jack Turner (P010) admitted from the waiting list to Intensive Care, bed ICU-1
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter patient ID: Severity (1 = Low, 2 = Moderate, 3 = Critical): 
+What happened:
+ - Grace Kelly (P005) changed from Low to Critical
+ - No free bed in a suitable ward. Grace Kelly (P005) stays in General Ward B and will be moved when a bed opens
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter patient ID: 
+What happened:
+ - Tom Walsh (P002) discharged from Intensive Care, bed ICU-2 is now free
+ - Grace Kelly (P005) moved from General Ward B bed GB-1 to Intensive Care bed ICU-2
+ - Emma Scott (P011) admitted from the waiting list to General Ward B, bed GB-1
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+1. Show everything
+2. Transfers only
+3. Waiting list events only
+4. Events for one patient
+Choose a filter: 
+<TIME> | TransferPending  | No free bed in a suitable ward. Grace Kelly (P005) stays in General Ward B and will be moved when a bed opens
+<TIME> | Transferred      | Grace Kelly (P005) moved from General Ward B bed GB-1 to Intensive Care bed ICU-2
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+1. Show everything
+2. Transfers only
+3. Waiting list events only
+4. Events for one patient
+Choose a filter: 
+<TIME> | Waitlisted       | No suitable bed for Jack Turner (P010, Critical, age 58). Added to waiting list at position 1
+<TIME> | Waitlisted       | No suitable bed for Emma Scott (P011, Moderate, age 36). Added to waiting list at position 2
+<TIME> | Admitted         | Jack Turner (P010) admitted from the waiting list to Intensive Care, bed ICU-1
+<TIME> | Admitted         | Emma Scott (P011) admitted from the waiting list to General Ward B, bed GB-1
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+1. Show everything
+2. Transfers only
+3. Waiting list events only
+4. Events for one patient
+Choose a filter: Enter patient ID: 
+<TIME> | Admitted         | Grace Kelly (P005) admitted to General Ward B, bed GB-1
+<TIME> | ConditionChanged | Grace Kelly (P005) changed from Low to Critical
+<TIME> | TransferPending  | No free bed in a suitable ward. Grace Kelly (P005) stays in General Ward B and will be moved when a bed opens
+<TIME> | Transferred      | Grace Kelly (P005) moved from General Ward B bed GB-1 to Intensive Care bed ICU-2
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Goodbye!

@@ -1,0 +1,89 @@
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Intensive Care (critical patients, any age): 2/2 beds in use
+   ICU-1  P010 Jack Turner, age 58, Critical
+   ICU-2  P002 Tom Walsh, age 45, Critical
+
+Children's Ward (children under 16, not critical): 1/2 beds in use
+   CH-1   P003 Lily Nguyen, age 9, Moderate
+   CH-2   free
+
+General Ward A (adults 16+, not critical): 3/3 beds in use
+   GA-1   P004 Arjun Patel, age 34, Moderate
+   GA-2   P006 Sam Brooks, age 51, Moderate
+   GA-3   P008 Ben Harris, age 63, Moderate
+
+General Ward B (adults 16+, not critical): 3/3 beds in use
+   GB-1   P005 Grace Kelly, age 72, Low
+   GB-2   P007 Olivia Ross, age 29, Low
+   GB-3   P009 Priya Singh, age 40, Low
+
+Waiting list: 1 patient(s)
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Waiting List (next in line first)
+---------------------------------
+1. P011 Emma Scott, age 36, Moderate, arrived <TIME>
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter a name or ID to search for: 
+P010 Jack Turner, age 58, Critical | Intensive Care, bed ICU-1
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Goodbye!

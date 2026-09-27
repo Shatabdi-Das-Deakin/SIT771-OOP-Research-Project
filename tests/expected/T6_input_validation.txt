@@ -1,0 +1,108 @@
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Invalid option.
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter patient name: This can't be empty.
+Enter patient name: Enter age: Please enter a whole number from 0 to 120.
+Enter age: Please enter a whole number from 0 to 120.
+Enter age: Severity (1 = Low, 2 = Moderate, 3 = Critical): Please enter 1, 2 or 3.
+Severity (1 = Low, 2 = Moderate, 3 = Critical): 
+What happened:
+ - Ava Lee (P001) admitted to General Ward A, bed GA-1
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter patient ID: Patient not found.
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Enter patient ID: Severity (1 = Low, 2 = Moderate, 3 = Critical): Patient not found.
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Invalid option.
+
+===============================
+   Patient Management
+===============================
+1. View Ward Occupancy
+2. Admit New Patient
+3. Discharge Patient
+4. Update Patient Condition
+5. View Waiting List
+6. Search Patients
+7. View Activity Log
+8. Open Ward Map
+9. Load Demo Patients
+10. Save Data
+0. Exit without Saving
+Choose an option: 
+Goodbye!
