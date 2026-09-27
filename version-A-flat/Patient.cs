@@ -18,6 +18,7 @@ public class Patient
     private int _age;               // used by the wards to decide child or adult
     private Severity _severity;     // Low, Moderate or Critical
     private DateTime _arrivalTime;  // used to break ties: who has been waiting longer
+    private bool _isPregnant;       // added in C2 so a maternity ward can be chosen
 
     // Read-only properties. There are no "set" parts, so nobody outside
     // this class can overwrite a patient's name or ID by accident.
@@ -26,14 +27,16 @@ public class Patient
     public int Age { get { return _age; } }
     public Severity Severity { get { return _severity; } }
     public DateTime ArrivalTime { get { return _arrivalTime; } }
+    public bool IsPregnant { get { return _isPregnant; } }
 
-    public Patient(string id, string name, int age, Severity severity, DateTime arrivalTime)
+    public Patient(string id, string name, int age, Severity severity, DateTime arrivalTime, bool isPregnant)
     {
         _id = id;
         _name = name;
         _age = age;
         _severity = severity;
         _arrivalTime = arrivalTime;
+        _isPregnant = isPregnant;
     }
 
     // Severity is the only thing allowed to change after a patient is
@@ -49,6 +52,8 @@ public class Patient
     // the SplashKit ward map, so the patient looks the same everywhere.
     public string GetSummary()
     {
-        return $"{Id} {Name}, age {Age}, {Severity}";
+        string summary = $"{Id} {Name}, age {Age}, {Severity}";
+        if (IsPregnant) summary += ", pregnant";
+        return summary;
     }
 }

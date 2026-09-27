@@ -45,10 +45,17 @@ public class Hospital
 
     // Creates the patient with the next ID and tries to give them a bed.
     // DateTime.Now records when they arrived, which matters for the waiting list.
+    // This shorter version is for patients who are not pregnant, so the
+    // demo patients did not need to change when pregnancy was added in C2.
     public Patient RegisterPatient(string name, int age, Severity severity)
     {
+        return RegisterPatient(name, age, severity, false);
+    }
+
+    public Patient RegisterPatient(string name, int age, Severity severity, bool isPregnant)
+    {
         // :000 pads the number to 3 digits, so 7 becomes "007" and the ID is "P007".
-        Patient patient = new Patient($"P{_nextPatientNumber:000}", name, age, severity, DateTime.Now);
+        Patient patient = new Patient($"P{_nextPatientNumber:000}", name, age, severity, DateTime.Now, isPregnant);
         _nextPatientNumber++;
         Admit(patient);
         return patient;
@@ -369,7 +376,7 @@ public class Hospital
 
                 // Arrival time is saved to the millisecond so the waiting list
                 // order is exactly the same after loading.
-                writer.WriteLine($"{patient.Id}|{patient.Name}|{patient.Age}|{patient.Severity}|{patient.ArrivalTime.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)}|{location}");
+                writer.WriteLine($"{patient.Id}|{patient.Name}|{patient.Age}|{patient.Severity}|{patient.ArrivalTime.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)}|{location}|{patient.IsPregnant}");
             }
 
             writer.WriteLine("LOG");
@@ -410,13 +417,15 @@ public class Hospital
         }
     }
 
-    // parts[0] = id, [1] = name, [2] = age, [3] = severity, [4] = arrival time, [5] = bed or WAITING
+    // parts[0] = id, [1] = name, [2] = age, [3] = severity, [4] = arrival time, [5] = bed or WAITING,
+    // [6] = pregnant (added in C2). Files saved before C2 have no [6], so we treat them as not pregnant.
     private void LoadPatient(string[] parts)
     {
         // Enum.Parse turns the text "Critical" back into Severity.Critical.
         Severity severity = (Severity)Enum.Parse(typeof(Severity), parts[3]);
         DateTime arrival = DateTime.ParseExact(parts[4], "yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture);
-        Patient patient = new Patient(parts[0], parts[1], int.Parse(parts[2]), severity, arrival);
+        bool isPregnant = parts.Length > 6 && bool.Parse(parts[6]);
+        Patient patient = new Patient(parts[0], parts[1], int.Parse(parts[2]), severity, arrival, isPregnant);
 
         if (parts[5] == "WAITING")
         {
