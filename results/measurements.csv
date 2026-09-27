@@ -13,3 +13,4 @@ C3,Children under 18,A,1,4,4,Ward.cs
 C3,Children under 18,B,2,4,4,ChildrensWard.cs GeneralWard.cs
 C4,Forget a rule,A,compiles with 0 errors and 0 warnings; ward silently accepts nobody,,,
 C4,Forget a rule,B,does not compile: 2 x CS0534 naming both missing methods,,,
+R,Refinement: shared age limits as protected constants,B,4,8,6,Ward.cs ChildrensWard.cs GeneralWard.cs ElderlyWard.cs

@@ -1,0 +1,24 @@
+Refinement check: moving the adult age limit after the refinement
+
+After Change 3, the age limits 18 and 75 were moved into the abstract Ward class
+of the inheritance-based design as protected constants (AdultAge, ElderlyAge).
+All ten tests still passed, with identical output.
+
+To measure the effect, the adult age limit was then moved from 18 to 17 in a
+scratch copy of both designs (this change was not kept).
+
+Code lines changed to move the adult age limit from 18 to 17
+  Inheritance-based design (after refinement): 1 file, +1 / -1  (Ward.cs: AdultAge = 17)
+  Conditional design:                          1 file, +4 / -4  (Ward.cs: two rules and two descriptions)
+
+Behaviour after the scratch change (admit a 17 year old, moderate, not pregnant)
+  Conditional design:        Mia Park (P001) admitted to General Ward A, bed GA-1
+                             Children's Ward (children under 17, not critical)
+                             General Ward A (adults 17 to 74, not critical)
+  Inheritance-based design:  Mia Park (P001) admitted to General Ward A, bed GA-1
+                             Children's Ward (children under 17, not critical)
+                             General Ward A (adults 17 to 74, not critical)
+
+Note: the same technique (named constants) could also be used in the conditional
+design. The point of this check is that the extra edits in Change 3 came from
+repeating the limits in each subclass, not from using inheritance.
