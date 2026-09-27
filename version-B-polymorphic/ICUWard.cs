@@ -8,8 +8,8 @@
 // one kind of ward:
 //   Critical, any age                    -> ICUWard
 //   Not critical, pregnant               -> MaternityWard
-//   Not critical, not pregnant, under 16 -> ChildrensWard
-//   Not critical, not pregnant, 16 to 74 -> GeneralWard
+//   Not critical, not pregnant, under 18 -> ChildrensWard
+//   Not critical, not pregnant, 18 to 74 -> GeneralWard
 //   Not critical, not pregnant, 75+      -> ElderlyWard
 // ============================================================
 
