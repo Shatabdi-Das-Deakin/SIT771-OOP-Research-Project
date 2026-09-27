@@ -119,15 +119,19 @@ Children's Ward (children under 16, not critical): 1/2 beds in use
    CH-1   P003 Lily Nguyen, age 9, Moderate
    CH-2   free
 
-General Ward A (adults 16+, not critical): 3/3 beds in use
+General Ward A (adults 16 to 74, not critical): 3/3 beds in use
    GA-1   P004 Arjun Patel, age 34, Moderate
    GA-2   P006 Sam Brooks, age 51, Moderate
    GA-3   P008 Ben Harris, age 63, Moderate
 
-General Ward B (adults 16+, not critical): 3/3 beds in use
+General Ward B (adults 16 to 74, not critical): 3/3 beds in use
    GB-1   P011 Emma Scott, age 36, Moderate
    GB-2   P007 Olivia Ross, age 29, Low
    GB-3   P009 Priya Singh, age 40, Low
+
+Elderly Care (adults 75+, not critical): 0/2 beds in use
+   EL-1   free
+   EL-2   free
 
 Waiting list: 0 patient(s)
 
